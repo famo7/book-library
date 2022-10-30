@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="halloween">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.33.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Library</title>
+</head>
+
+<body>
+    <div class="flex flex-col justify-center items-center h-screen">
+        <form>
+            <label for="my-modal" class="btn modal-button btn-primary">Add Book</label>
+            <input type="checkbox" id="my-modal" class="modal-toggle" />
+            <div class="modal">
+                <div class="modal-box">
+                    <p class="text-xl font-bold mb-2">Add New Book</p>
+                    <input type="text" placeholder="Title" class="input input-bordered input-primary w-full  mb-2"
+                        id="title" required />
+                    <input type="text" placeholder="Author" class="input input-bordered input-primary w-full  mb-2"
+                        id="author" required />
+                    <input type="text" placeholder="Pages" class="input input-bordered input-primary w-full" id="pages"
+                        required />
+
+                    <div class="form-control mt-2">
+                        <div class="flex">
+                            <span class="label-text mr-2">Read</span>
+                            <input id="read" type="checkbox" checked="checked"
+                                class="checkbox checkbox-primary checkbox-md">
+                        </div>
+                    </div>
+                    <div class="modal-action justify-start">
+
+                        <input type="submit" class="btn btn-wide btn-outline btn-primary" value="Add">
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="overflow-x-auto">
+            <div class="alert alert-error shadow-lg mt-5 invisible" id="error-div">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>Error, make sure title is unique!</span>
+                </div>
+            </div>
+            <table class="table w-full mt-5">
+                <!-- head -->
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>pages</th>
+                        <th>read/unread</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                
+
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
